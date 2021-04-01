@@ -24,6 +24,10 @@ public class DocumentService {
         }
     }
 
+    public DocumentData getDataByOrderId(long orderId){
+        return repository.findByOrderId(orderId).orElse(null);
+    }
+
     public List<DocumentData> getAllData(){
         return repository.findAll();
     }
